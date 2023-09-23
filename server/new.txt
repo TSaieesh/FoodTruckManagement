@@ -1,0 +1,37 @@
+struct node{
+int data;
+struct node *next;
+};
+
+
+void display(struct node *list){
+ struct node *temp = list->head;
+ while(temp != NULL){
+  print("%d ",temp->data);
+  temp = temp->next;
+}
+}
+
+1->2->3->4->NULL
+
+temp = 1
+while( temp!=NULL) 
+next = temp->next address of 2 address of 3
+temp.next = prev null 
+prev = temp 1
+temp = next address of 2
+
+struct node hasLoop(struct node *head){  1 2 3 4 5 2
+  struct node *one = head; 1
+  struct node *two = head; 1
+   
+while( two != NULL && two->next !=NULL){  
+   one = one->next; add of 2
+   two = two->next->next; add of 3
+
+   if( one == two ){  add of 2 == add of 3
+     return two;
+   }
+  }
+  return;
+}
